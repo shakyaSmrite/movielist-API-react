@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav>
-      <ul>
+    <nav  className="topBar">
+      <ul className="nav-link">
         <li>
           <Link to="/">Home</Link>
         </li>

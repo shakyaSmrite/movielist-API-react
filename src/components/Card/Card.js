@@ -4,7 +4,7 @@ const Card = ({ title, year, poster }) => {
   return (
     <div>
       <h5>{title}</h5>
-      <p>{year}</p>
+      <h6>{year}</h6>
       <img src={poster} alt="girl" width="200" height="200" />
     </div>
   );

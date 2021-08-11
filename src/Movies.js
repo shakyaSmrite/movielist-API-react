@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from "react";
-import Hero from "./Movies/Hero/Hero.js";
+import Hero from "./components/Hero/Hero.js";
 import axios from "axios";
+import ListMovies from "./components/ListMovies/ListMovies.js";
 
 const Movies = (props) => {
   const [searchString, setSearchString] = useState(" ");
-  const [data, setData] = useState([]);
+  const [movie, setMovie] = useState([]);
 
+  console.log(searchString);
+  //${searchString}
   useEffect(() => {
     axios
-      .get(`http://www.omdbapi.com/?apikey=fd2a1fe0=${searchString}`)
-      .then((resp) => setData(resp.data))
+      .get(`http://www.omdbapi.com/?apikey=fd2a1fe0&s="${searchString}"`)
+      .then((resp) => {
+        setMovie(resp.data.Search);
+      })
+
       .catch((e) => console.log(e));
   }, [searchString]);
 
-//   const omdbMovieList = omdbList.map((x) => {
-//       return (
-//         <div className="omdbcontain" key={x.id}>
-//           <DataFile Title={x.Title} />
-//         </div>
-//       );
+  //   const omdbMovieList = omdbList.map((x) => {
+  //       return (
+  //         <div className="omdbcontain" key={x.id}>
+  //           <DataFile Title={x.Title} />
+  //         </div>
+  //       );
 
   return (
     <div>
@@ -28,11 +34,11 @@ const Movies = (props) => {
         placeHolder="enter your search here"
       />
       <div>
-        {<ListMovies/>}
-           {} <Nomination/>}
+        <ListMovies movie={movie} />
+        {/* {<Nomination/>} */}
       </div>
     </div>
-  )
-
+  );
+};
 
 export default Movies;
