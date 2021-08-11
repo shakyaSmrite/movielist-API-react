@@ -1,0 +1,14 @@
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: bisque;
+  color: black;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-decoration: none;
+}
