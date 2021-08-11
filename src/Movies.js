@@ -4,7 +4,7 @@ import axios from "axios";
 import ListMovies from "./components/ListMovies/ListMovies.js";
 
 const Movies = (props) => {
-  const [searchString, setSearchString] = useState(" ");
+  const [searchString, setSearchString] = useState("");
   const [movie, setMovie] = useState([]);
 
   console.log(searchString);
@@ -13,7 +13,7 @@ const Movies = (props) => {
     axios
       .get(`http://www.omdbapi.com/?apikey=fd2a1fe0&s="${searchString}"`)
       .then((resp) => {
-        setMovie(resp.data.Search);
+        console.log(resp.data.Search, "SearchString: ", searchString);
       })
 
       .catch((e) => console.log(e));
@@ -34,7 +34,7 @@ const Movies = (props) => {
         placeHolder="enter your search here"
       />
       <div>
-        <ListMovies movie={movie} />
+        {/* <ListMovies movie={movie} /> */}
         {/* {<Nomination/>} */}
       </div>
     </div>
