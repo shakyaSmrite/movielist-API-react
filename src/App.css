@@ -1,9 +1,10 @@
-* {
+body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: rgb(6, 41, 65);
-  color: rgb(253, 246, 246);
+  background-color: rgb(11, 44, 87);
 }
-
+.App {
+  color: white;
+}
 h1 {
   text-align: center;
 }
@@ -27,6 +28,8 @@ nav {
   height: 6vh;
   justify-content: space-around;
   border: 2px solid rgba(209, 44, 22, 0.979);
+  margin: 0px;
+  padding: 0px;
 }
 
 .nav-link {
@@ -44,7 +47,9 @@ nav {
 
 a {
   text-decoration: none;
+  color: rgb(253, 246, 246);
 }
+
 a:hover {
   background-color: hsla(7, 78%, 56%, 0.979);
   cursor: pointer;

@@ -1,0 +1,27 @@
+/* .moviecontainer {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.splitBody {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.searchSection {
+  width: 50vw;
+}
+
+.nominationSection {
+  width: 50vw;
+}
+
+.card-cover {
+    display: flex;
+    justify-content: space-evenly;
+  background-color: rgb(81, 145, 29);
+}
